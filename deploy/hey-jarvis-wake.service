@@ -1,0 +1,24 @@
+[Unit]
+Description=Offline Hey Jarvis wake word and Mandarin acknowledgement
+After=sound.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=__SERVICE_USER__
+WorkingDirectory=__INSTALL_DIR__
+Environment=PYTHONUNBUFFERED=1
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=OPENBLAS_NUM_THREADS=1
+Environment=OMP_NUM_THREADS=1
+Environment=WAKE_CHANNEL=0
+Environment=WAKE_THRESHOLD=0.2
+Environment=WAKE_HITS=3
+ExecStart=__INSTALL_DIR__/.venv/bin/python __INSTALL_DIR__/wake_service.py
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=5
+KillMode=control-group
+
+[Install]
+WantedBy=multi-user.target

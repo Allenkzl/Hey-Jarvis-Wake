@@ -114,7 +114,7 @@ systemctl restart hey-jarvis-wake   # 改配置后重启
 
 ## 许可
 
-- **代码**：Apache-2.0（与 openWakeWord 一致），见 [LICENSE](LICENSE)
+- **代码**：MIT License（Copyright 2026 Allenkzl），见 [LICENSE](LICENSE)
 - **模型**：openWakeWord 官方预训练模型为 **CC BY-NC-SA 4.0**（非商业用途），见 [MODEL_LICENSE.md](MODEL_LICENSE.md)；模型文件不入库，由 `scripts/download_models.sh` 下载并校验 SHA256
   > ⚠️ 商业/展厅场景使用模型前请自行确认上游授权条款
 
